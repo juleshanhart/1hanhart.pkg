@@ -1,0 +1,23 @@
+Package: hanhart.pkg
+Title: An R package for idk *making surveys data/plain data pink & fun
+        to look at ???
+Version: 0.1
+Authors@R: c(
+  person(given = "Jules",
+          family = "Hanhart", 
+          role = c("cre", "aut"),
+          email = "elizabeth.hanhart@selu.edu")
+          )
+Description: no clue. *100-500 characters*
+License: MIT + file LICENSE
+Depends: R (>= 2.10)
+Imports: tidyverse, broom
+RoxygenNote: 7.1.1
+Suggests: knitr, rmarkdown
+VignetteBuilder: knitr
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+NeedsCompilation: no
+Packaged: 2023-10-24 19:25:45 UTC; r2157131
+Author: Jules Hanhart [cre, aut]
+Maintainer: Jules Hanhart <elizabeth.hanhart@selu.edu>
