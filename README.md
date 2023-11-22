@@ -1,5 +1,5 @@
 # hanhart.pkg
 
-## An R package for idk *making surveys data/plain data pink & fun to look at ???
+## An R package for consolidating data and making it easier to interpret.
 
-*type a few words about what your package does- shortened version of description*
+This R package takes overwhelming data and condenses it, then turns the final plot pink. 

@@ -1,5 +1,5 @@
 Package: hanhart.pkg
-Title: An R package for idk *making surveys data/plain data pink & fun to look at ???
+Title: An R package for consolidating data and making it easier to interpret.
 Version: 0.1
 Authors@R: c(
   person(given = "Jules",
@@ -7,7 +7,7 @@ Authors@R: c(
           role = c("cre", "aut"),
           email = "elizabeth.hanhart@selu.edu")
           )
-Description: no clue. *100-500 characters* jkhckjebhckjberkj
+Description: This R package is made for those of us who are not exceptionally bright when it comes to computers and coding. This package consolidates and condenses data, making it less difficult to understand, and also makes the final plot pink, making it much more fun to look at.
 License: MIT + file LICENSE
 Depends: 
   R (>= 2.10)

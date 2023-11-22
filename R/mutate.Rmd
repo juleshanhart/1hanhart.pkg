@@ -1,8 +1,8 @@
 ```{r}
-weight_in_lbs <- function(data = surveysnonas){
+weight_in_lbs <- function(data = surveys){
   clean <- data %>% 
   mutate(weight_in_lbs = weight*0.0022) %>% 
   return(clean)
 }
-head(weight_in_lbs(surveysnonas))
+head(weight_in_lbs(surveys))
 ```

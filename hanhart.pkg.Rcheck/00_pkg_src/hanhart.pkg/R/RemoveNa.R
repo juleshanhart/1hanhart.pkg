@@ -1,6 +1,6 @@
-function 1- a function to clean up data
-for this function requirement i will omit na values from the surveys dataset. this will allow us to visualize the dataset with a better understanding of where each value lies.
-*see hwq1 + removenas.Rmd for example/reminder*
+#function 1- a function to clean up data
+#for this function requirement i will omit na values from the surveys dataset. this will allow us to visualize the dataset with a better understanding of where each value lies.
+#*see hwq1 + removenas.Rmd for example/reminder*
  
   
   

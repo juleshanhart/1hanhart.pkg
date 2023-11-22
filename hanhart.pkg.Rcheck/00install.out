@@ -1,9 +1,14 @@
 * installing *source* package ‘hanhart.pkg’ ...
 ** using staged installation
 ** R
-Error in parse(...) : 
-  /cloud/project/hanhart.pkg/hanhart.pkg.Rcheck/00_pkg_src/hanhart.pkg/R/AllPinkEverything.R:1:10: unexpected numeric constant
-1: function 5
-             ^
-ERROR: unable to collate and parse R files for package ‘hanhart.pkg’
-* removing ‘/cloud/project/hanhart.pkg/hanhart.pkg.Rcheck/hanhart.pkg’
+** data
+** byte-compile and prepare package for lazy loading
+** help
+No man pages found in package  ‘hanhart.pkg’ 
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (hanhart.pkg)

@@ -6,6 +6,7 @@
     GNU Fortran (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0
 * running under: Ubuntu 20.04.6 LTS
 * using session charset: UTF-8
+* using options ‘--no-manual --as-cran’
 * checking for file ‘hanhart.pkg/DESCRIPTION’ ... OK
 * this is package ‘hanhart.pkg’ version ‘0.1’
 * package encoding: UTF-8
@@ -17,8 +18,65 @@
 * checking for hidden files and directories ... OK
 * checking for portable file names ... OK
 * checking for sufficient/correct file permissions ... OK
-* checking whether package ‘hanhart.pkg’ can be installed ... ERROR
-Installation failed.
-See ‘/cloud/project/hanhart.pkg/hanhart.pkg.Rcheck/00install.out’ for details.
+* checking serialization versions ... OK
+* checking whether package ‘hanhart.pkg’ can be installed ... OK
+* checking installed package size ... OK
+* checking package directory ... OK
+* checking for future file timestamps ... OK
+* checking DESCRIPTION meta-information ... NOTE
+Malformed Description field: should contain one or more complete sentences.
+* checking top-level files ... NOTE
+Non-standard files/directories found at top level:
+  ‘README.html’ ‘docs’
+* checking for left-over files ... OK
+* checking index information ... OK
+* checking package subdirectories ... OK
+* checking R files for non-ASCII characters ... OK
+* checking R files for syntax errors ... OK
+* checking whether the package can be loaded ... OK
+* checking whether the package can be loaded with stated dependencies ... OK
+* checking whether the package can be unloaded cleanly ... OK
+* checking whether the namespace can be loaded with stated dependencies ... OK
+* checking whether the namespace can be unloaded cleanly ... OK
+* checking loading without being on the library search path ... OK
+* checking dependencies in R code ... NOTE
+Namespaces in Imports field not imported from:
+  ‘broom’ ‘tidyverse’
+  All declared Imports should be used.
+* checking S3 generic/method consistency ... OK
+* checking replacement functions ... OK
+* checking foreign function calls ... OK
+* checking R code for possible problems ... NOTE
+get_weight: no visible global function definition for ‘%>%’
+get_weight: no visible global function definition for ‘na.omit’
+get_weight: no visible global function definition for ‘select’
+get_weight: no visible binding for global variable ‘weight’
+weight_in_lbs: no visible binding for global variable ‘surveysnonas’
+weight_in_lbs: no visible global function definition for ‘%>%’
+weight_in_lbs: no visible global function definition for ‘mutate’
+weight_in_lbs: no visible binding for global variable ‘weight’
+Undefined global functions or variables:
+  %>% mutate na.omit select surveysnonas weight
+Consider adding
+  importFrom("stats", "na.omit")
+to your NAMESPACE file.
+* checking for missing documentation entries ... WARNING
+Undocumented data sets:
+  ‘surveys’
+All user-level objects in a package should have documentation entries.
+See chapter ‘Writing R documentation files’ in the ‘Writing R
+Extensions’ manual.
+* checking contents of ‘data’ directory ... OK
+* checking data for non-ASCII characters ... OK
+* checking data for ASCII and uncompressed saves ... OK
+* checking files in ‘vignettes’ ... WARNING
+Files in the 'vignettes' directory but no files in 'inst/doc':
+  ‘PinkTutorial.Rmd’
+Files named as vignettes but with no recognized vignette engine:
+   ‘vignettes/PinkTutorial.Rmd’
+(Is a VignetteBuilder field missing?)
+* checking examples ... NONE
+* checking for non-standard things in the check directory ... OK
+* checking for detritus in the temp directory ... OK
 * DONE
-Status: 1 ERROR
+Status: 2 WARNINGs, 4 NOTEs
