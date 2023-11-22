@@ -1,0 +1,4 @@
+```{r}
+lmfunc <- lm(formula = plot_id~weight, data = surveys)
+summary(lmfunc)
+```
