@@ -1,6 +1,6 @@
 Package: hanhart.pkg
-Title: An R package for idk *making surveys data/plain data pink & fun
-        to look at ???
+Title: An R package for consolidating data and making it easier to
+        interpret.
 Version: 0.1
 Authors@R: c(
   person(given = "Jules",
@@ -8,16 +8,16 @@ Authors@R: c(
           role = c("cre", "aut"),
           email = "elizabeth.hanhart@selu.edu")
           )
-Description: no clue. *100-500 characters* jkhckjebhckjberkj
+Description: This R package is made for those of us who are not exceptionally bright when it comes to computers and coding. This package consolidates and condenses data, making it less difficult to understand, and also makes the final plot pink, making it much more fun to look at.
 License: MIT + file LICENSE
 Depends: R (>= 2.10)
 Imports: tidyverse, broom
-RoxygenNote: 7.1.1
+RoxygenNote: 7.2.3
 Suggests: knitr, rmarkdown
 VignetteBuilder: knitr
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 NeedsCompilation: no
-Packaged: 2023-11-02 20:04:41 UTC; r2157131
+Packaged: 2023-11-28 14:41:22 UTC; r2157131
 Author: Jules Hanhart [cre, aut]
 Maintainer: Jules Hanhart <elizabeth.hanhart@selu.edu>

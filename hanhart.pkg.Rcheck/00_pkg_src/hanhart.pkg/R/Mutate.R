@@ -1,22 +1,17 @@
-#function 2- a function to manipulate, subset, or transform data 
-#for this function i will use mutate in order to convert the weight in what we presume is grams to weight in pounds. this will allow me to get a better understanding and picture of the mass of the animal.
-#example function: mutate(surveysnonas, weight_in_lbs = weight*0.0022)
-
-
-#'Convert weight from grams to pounds
+#'The mutate function will convert the values in the weight column from grams to pounds. 
 #'
-#'Multiply weight by 0.0022 in order to get pounds from grams
+#'Multiply the values within the weight column, given in grams, by 0.0022 in order to return the weight values in pounds.
 #'
-#'@param data=surveysnonas Data that will be used in this function to get weight in pounds
-#'@return clean The data that has been cleaned/changed, in this case the weight column.
+#'@param data Data that is being used to run the function /cloud/project/hanhart.pkg/data/surveys.csv
+#'
+#'@return The surveys dataset with an additional column for the weight values in pounds /cloud/project/hanhart.pkg/data/pounds.csv
 #'
 #'@export
 
 
 
 
-
-weight_in_lbs <- function(data = surveysnonas){
+weight_in_lbs <- function(data = surveys){
   clean <- data %>% 
     mutate(weight_in_lbs = weight*0.0022) %>% 
     return(clean)

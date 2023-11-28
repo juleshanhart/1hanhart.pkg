@@ -72,7 +72,7 @@
                         <h4 data-toc-skip class="author">Jules
 Hanhart</h4>
             
-            <h4 data-toc-skip class="date">2023-11-22</h4>
+            <h4 data-toc-skip class="date">2023-11-28</h4>
       
       
       <div class="hidden name"><code>PinkTutorial.Rmd</code></div>
@@ -81,8 +81,24 @@ Hanhart</h4>
 
     
     
-<p>type stuff in here about R package- this will be your “tutorial”
-file. put data you will be using, what it does, and brief how to.</p>
+<p>This package will consolidate and condense data, making it easier to
+look at, and then turn the final plot pink so I like it more.</p>
+<p>Data being used: /cloud/project/hanhart.pkg/data/surveys.csv</p>
+<p>Function 1: a function to clean data- consolidate function The
+consolidate function removes NA values and simultaneously deletes the
+majority of columns in order to return four “focus” columns.</p>
+<p>Function 2: a function to manipulate data- mutate function The mutate
+function converts the data in the weight column from grams to
+pounds.</p>
+<p>Function 3: a statistical function- lm function The lm function fits
+a linear model using plot_id and weight, giving information about
+residuals, error rates, estimates, etc.</p>
+<p>Function 4: a function that plots data - point plot function The
+point plot function returns a plot using geom_point(), of weight and
+species_id grouped by sex.</p>
+<p>Function 5: a function for fun- pink function The pink function
+simply turns the colors in the previous graph pink so that I enjoy
+looking at it more.</p>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

@@ -19,6 +19,12 @@
     <loc>/index.html</loc>
   </url>
   <url>
+    <loc>/reference/get_weight.html</loc>
+  </url>
+  <url>
     <loc>/reference/index.html</loc>
+  </url>
+  <url>
+    <loc>/reference/weight_in_lbs.html</loc>
   </url>
 </urlset>
