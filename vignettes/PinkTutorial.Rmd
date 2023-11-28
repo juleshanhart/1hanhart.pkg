@@ -12,17 +12,12 @@ knitr::opts_chunk$set(echo = TRUE)
 Install Instructions:
 enter the following code into your console of rstudio. 
 devtools::install_github("juleshanhart/1hanhart.pkg")
-```{r}
-devtools::install_github("juleshanhart/1hanhart.pkg")
-```
+
 
 Data being used: surveys dataset
 Download Data Instructions: 
 enter the following code into your console of rstudio.
 read_csv("/cloud/project/hanhart.pkg/data/surveys.csv")
-```{r}
-read_csv("/cloud/project/hanhart.pkg/data/surveys.csv")
-```
 
 
 This package will consolidate and condense data, making it easier to look at, and then turn the final plot pink so I like it more.
