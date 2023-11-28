@@ -11,57 +11,80 @@ knitr::opts_chunk$set(echo = TRUE)
 
 Install Instructions:
 enter the following code into your console of rstudio. 
+```{r}
 devtools::install_github("juleshanhart/1hanhart.pkg")
+```
 
+```{r}
+library(tidyverse)
+library(dplyr)
+library(broom)
+library(knitr)
+```
 
 Data being used: surveys dataset
 Download Data Instructions: 
 enter the following code into your console of rstudio.
+```{r}
 read_csv("/cloud/project/hanhart.pkg/data/surveys.csv")
-
+```
 
 This package will consolidate and condense data, making it easier to look at, and then turn the final plot pink so I like it more.
 
 
 Function 1: a function to clean data- consolidate function
 The consolidate function removes NA values and simultaneously deletes the majority of columns in order to return four "focus" columns. 
-example: consolidate <- function(data){
+example: 
+```{r}
+consolidate <- function(data){
     clean <- data %>% 
         na.omit(data) %>% 
         select(weight, hindfoot_length, sex, species_id) %>% 
         return(clean)
 }
 #head(consolidate(surveys))
+```
 
 Function 2: a function to manipulate data- mutate function
 The mutate function converts the data in the weight column from grams to pounds. 
-example: weight_in_lbs <- function(data = surveys){
+example: 
+```{r}
+weight_in_lbs <- function(data = surveys){
   clean <- data %>% 
   mutate(weight_in_lbs = weight*0.0022) %>% 
   return(clean)
 }
 #head(weight_in_lbs(surveys))
+```
 
 Function 3: a statistical function- lm function
 The lm function fits a linear model using plot_id and weight, giving information about residuals, error rates, estimates, etc.
-example: linearmodel <- function(data){
+example: 
+```{r}
+linearmodel <- function(data){
    clean <- data %>% 
        lm(formula = plot_id~weight, data = surveys) %>% 
    return(clean)
 }
 #summary(linearmodel(unlist(data)))
+```
 
 Function 4: a function that plots data - point plot function
 The point plot function returns a plot using geom_point(), of weight and species_id grouped by sex. 
-example: pointplot <- function(x = weight, y = species_id, surveys){
+example: 
+```{r}
+pointplot <- function(x = weight, y = species_id, surveys){
     ggplot(data = surveys, mapping = aes(x = weight, y = species_id, col = sex)) + geom_point()
 }
 #pointplot('weight', 'species_id', surveys)
+```
 
 Function 5: a function for fun- pink function
 The pink function simply turns the colors in the previous graph pink so that I enjoy looking at it more. 
 example: 
+```{r}
 pinkfunction <- function(x = weight, y = species_id,surveys){
   ggplot(data = surveys, mapping = aes(x = weight, y = species_id, col = sex)) + geom_point() + stat_smooth(method = lm, col = "hotpink") + theme(text = element_text(color =  "pink"))
 }
 #pinkfunction('weight', 'species_id', surveys)
+```

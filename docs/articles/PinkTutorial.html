@@ -82,42 +82,119 @@ Hanhart</h4>
     
     
 <p>Install Instructions: enter the following code into your console of
-rstudio. devtools::install_github(“juleshanhart/1hanhart.pkg”)</p>
+rstudio.</p>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"juleshanhart/1hanhart.pkg"</span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">## Using github PAT from envvar GITHUB_PAT</span></span></code></pre>
+<pre><code><span><span class="co">## Downloading GitHub repo juleshanhart/1hanhart.pkg@HEAD</span></span></code></pre>
+<pre><code><span><span class="co">## </span></span>
+<span><span class="co">## <span style="color: #00BBBB;">──</span> <span style="color: #00BBBB;">R CMD build</span> <span style="color: #00BBBB;">─────────────────────────────────────────────────────────────────</span></span></span>
+<span><span class="co">## * checking for file ‘/tmp/RtmppdJhX1/remotes2ce22adbfa8c/juleshanhart-1hanhart.pkg-ce112e1/DESCRIPTION’ ... OK</span></span>
+<span><span class="co">## * preparing ‘hanhart.pkg’:</span></span>
+<span><span class="co">## * checking DESCRIPTION meta-information ... OK</span></span>
+<span><span class="co">## * excluding invalid files</span></span>
+<span><span class="co">## Subdirectory 'R' contains invalid file names:</span></span>
+<span><span class="co">##   ‘consolidate.Rmd’ ‘lmsummary.Rmd’ ‘mutate.Rmd’ ‘pink.Rmd’</span></span>
+<span><span class="co">##   ‘pointplot.Rmd’</span></span>
+<span><span class="co">## * checking for LF line-endings in source and make files and shell scripts</span></span>
+<span><span class="co">## * checking for empty or unneeded directories</span></span>
+<span><span class="co">## * looking to see if a ‘data/datalist’ file should be added</span></span>
+<span><span class="co">## * building ‘hanhart.pkg_0.1.tar.gz’</span></span>
+<span><span class="co">## Warning: invalid uid value replaced by that for user 'nobody'</span></span></code></pre>
+<pre><code><span><span class="co">## Installing package into '/tmp/RtmpCTjoro/temp_libpath1e06207c1ef6'</span></span>
+<span><span class="co">## (as 'lib' is unspecified)</span></span></code></pre>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org" class="external-link">tidyverse</a></span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">## ── <span style="font-weight: bold;">Attaching core tidyverse packages</span> ──────────────────────── tidyverse 2.0.0 ──</span></span>
+<span><span class="co">## <span style="color: #00BB00;">✔</span> <span style="color: #0000BB;">dplyr    </span> 1.1.4     <span style="color: #00BB00;">✔</span> <span style="color: #0000BB;">readr    </span> 2.1.4</span></span>
+<span><span class="co">## <span style="color: #00BB00;">✔</span> <span style="color: #0000BB;">forcats  </span> 1.0.0     <span style="color: #00BB00;">✔</span> <span style="color: #0000BB;">stringr  </span> 1.5.1</span></span>
+<span><span class="co">## <span style="color: #00BB00;">✔</span> <span style="color: #0000BB;">ggplot2  </span> 3.4.4     <span style="color: #00BB00;">✔</span> <span style="color: #0000BB;">tibble   </span> 3.2.1</span></span>
+<span><span class="co">## <span style="color: #00BB00;">✔</span> <span style="color: #0000BB;">lubridate</span> 1.9.3     <span style="color: #00BB00;">✔</span> <span style="color: #0000BB;">tidyr    </span> 1.3.0</span></span>
+<span><span class="co">## <span style="color: #00BB00;">✔</span> <span style="color: #0000BB;">purrr    </span> 1.0.2     </span></span>
+<span><span class="co">## ── <span style="font-weight: bold;">Conflicts</span> ────────────────────────────────────────── tidyverse_conflicts() ──</span></span>
+<span><span class="co">## <span style="color: #BB0000;">✖</span> <span style="color: #0000BB;">dplyr</span>::<span style="color: #00BB00;">filter()</span> masks <span style="color: #0000BB;">stats</span>::filter()</span></span>
+<span><span class="co">## <span style="color: #BB0000;">✖</span> <span style="color: #0000BB;">dplyr</span>::<span style="color: #00BB00;">lag()</span>    masks <span style="color: #0000BB;">stats</span>::lag()</span></span>
+<span><span class="co">## <span style="color: #00BBBB;">ℹ</span> Use the conflicted package (<span style="color: #0000BB; font-style: italic;">&lt;http://conflicted.r-lib.org/&gt;</span>) to force all conflicts to become errors</span></span></code></pre>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://broom.tidymodels.org/" class="external-link">broom</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://yihui.org/knitr/" class="external-link">knitr</a></span><span class="op">)</span></span></code></pre></div>
 <p>Data being used: surveys dataset Download Data Instructions: enter
-the following code into your console of rstudio.
-read_csv(“/cloud/project/hanhart.pkg/data/surveys.csv”)</p>
+the following code into your console of rstudio.</p>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html" class="external-link">read_csv</a></span><span class="op">(</span><span class="st">"/cloud/project/hanhart.pkg/data/surveys.csv"</span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">## <span style="font-weight: bold;">Rows: </span><span style="color: #0000BB;">35549</span> <span style="font-weight: bold;">Columns: </span><span style="color: #0000BB;">9</span></span></span>
+<span><span class="co">## <span style="color: #00BBBB;">──</span> <span style="font-weight: bold;">Column specification</span> <span style="color: #00BBBB;">────────────────────────────────────────────────────────</span></span></span>
+<span><span class="co">## <span style="font-weight: bold;">Delimiter:</span> ","</span></span>
+<span><span class="co">## <span style="color: #BB0000;">chr</span> (2): species_id, sex</span></span>
+<span><span class="co">## <span style="color: #00BB00;">dbl</span> (7): record_id, month, day, year, plot_id, hindfoot_length, weight</span></span>
+<span><span class="co">## </span></span>
+<span><span class="co">## <span style="color: #00BBBB;">ℹ</span> Use `spec()` to retrieve the full column specification for this data.</span></span>
+<span><span class="co">## <span style="color: #00BBBB;">ℹ</span> Specify the column types or set `show_col_types = FALSE` to quiet this message.</span></span></code></pre>
+<pre><code><span><span class="co">## <span style="color: #949494;"># A tibble: 35,549 × 9</span></span></span>
+<span><span class="co">##    record_id month   day  year plot_id species_id sex   hindfoot_length weight</span></span>
+<span><span class="co">##        <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 1</span>         1     7    16  <span style="text-decoration: underline;">1</span>977       2 NL         M                  32     <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 2</span>         2     7    16  <span style="text-decoration: underline;">1</span>977       3 NL         M                  33     <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 3</span>         3     7    16  <span style="text-decoration: underline;">1</span>977       2 DM         F                  37     <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 4</span>         4     7    16  <span style="text-decoration: underline;">1</span>977       7 DM         M                  36     <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 5</span>         5     7    16  <span style="text-decoration: underline;">1</span>977       3 DM         M                  35     <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 6</span>         6     7    16  <span style="text-decoration: underline;">1</span>977       1 PF         M                  14     <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 7</span>         7     7    16  <span style="text-decoration: underline;">1</span>977       2 PE         F                  <span style="color: #BB0000;">NA</span>     <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 8</span>         8     7    16  <span style="text-decoration: underline;">1</span>977       1 DM         M                  37     <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 9</span>         9     7    16  <span style="text-decoration: underline;">1</span>977       1 DM         F                  34     <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">## <span style="color: #BCBCBC;">10</span>        10     7    16  <span style="text-decoration: underline;">1</span>977       6 PF         F                  20     <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">## <span style="color: #949494;"># ℹ 35,539 more rows</span></span></span></code></pre>
 <p>This package will consolidate and condense data, making it easier to
 look at, and then turn the final plot pink so I like it more.</p>
 <p>Function 1: a function to clean data- consolidate function The
 consolidate function removes NA values and simultaneously deletes the
-majority of columns in order to return four “focus” columns. example:
-consolidate &lt;- function(data){ clean &lt;- data %&gt;% na.omit(data)
-%&gt;% select(weight, hindfoot_length, sex, species_id) %&gt;%
-return(clean) } #head(consolidate(surveys))</p>
+majority of columns in order to return four “focus” columns.
+example:</p>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">consolidate</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">data</span><span class="op">)</span><span class="op">{</span></span>
+<span>    <span class="va">clean</span> <span class="op">&lt;-</span> <span class="va">data</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
+<span>        <span class="fu"><a href="https://rdrr.io/r/stats/na.fail.html" class="external-link">na.omit</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
+<span>        <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">weight</span>, <span class="va">hindfoot_length</span>, <span class="va">sex</span>, <span class="va">species_id</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
+<span>        <span class="kw"><a href="https://rdrr.io/r/base/function.html" class="external-link">return</a></span><span class="op">(</span><span class="va">clean</span><span class="op">)</span></span>
+<span><span class="op">}</span></span>
+<span><span class="co">#head(consolidate(surveys))</span></span></code></pre></div>
 <p>Function 2: a function to manipulate data- mutate function The mutate
 function converts the data in the weight column from grams to pounds.
-example: weight_in_lbs &lt;- function(data = surveys){ clean &lt;- data
-%&gt;% mutate(weight_in_lbs = weight*0.0022) %&gt;% return(clean) }
-#head(weight_in_lbs(surveys))</p>
+example:</p>
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">weight_in_lbs</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">data</span> <span class="op">=</span> <span class="va">surveys</span><span class="op">)</span><span class="op">{</span></span>
+<span>  <span class="va">clean</span> <span class="op">&lt;-</span> <span class="va">data</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span>weight_in_lbs <span class="op">=</span> <span class="va">weight</span><span class="op">*</span><span class="fl">0.0022</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
+<span>  <span class="kw"><a href="https://rdrr.io/r/base/function.html" class="external-link">return</a></span><span class="op">(</span><span class="va">clean</span><span class="op">)</span></span>
+<span><span class="op">}</span></span>
+<span><span class="co">#head(weight_in_lbs(surveys))</span></span></code></pre></div>
 <p>Function 3: a statistical function- lm function The lm function fits
 a linear model using plot_id and weight, giving information about
-residuals, error rates, estimates, etc. example: linearmodel &lt;-
-function(data){ clean &lt;- data %&gt;% lm(formula = plot_id~weight,
-data = surveys) %&gt;% return(clean) }
-#summary(linearmodel(unlist(data)))</p>
+residuals, error rates, estimates, etc. example:</p>
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">linearmodel</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">data</span><span class="op">)</span><span class="op">{</span></span>
+<span>   <span class="va">clean</span> <span class="op">&lt;-</span> <span class="va">data</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
+<span>       <span class="fu"><a href="https://rdrr.io/r/stats/lm.html" class="external-link">lm</a></span><span class="op">(</span>formula <span class="op">=</span> <span class="va">plot_id</span><span class="op">~</span><span class="va">weight</span>, data <span class="op">=</span> <span class="va">surveys</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
+<span>   <span class="kw"><a href="https://rdrr.io/r/base/function.html" class="external-link">return</a></span><span class="op">(</span><span class="va">clean</span><span class="op">)</span></span>
+<span><span class="op">}</span></span>
+<span><span class="co">#summary(linearmodel(unlist(data)))</span></span></code></pre></div>
 <p>Function 4: a function that plots data - point plot function The
 point plot function returns a plot using geom_point(), of weight and
-species_id grouped by sex. example: pointplot &lt;- function(x = weight,
-y = species_id, surveys){ ggplot(data = surveys, mapping = aes(x =
-weight, y = species_id, col = sex)) + geom_point() }
-#pointplot(‘weight’, ‘species_id’, surveys)</p>
+species_id grouped by sex. example:</p>
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">pointplot</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span> <span class="op">=</span> <span class="va">weight</span>, <span class="va">y</span> <span class="op">=</span> <span class="va">species_id</span>, <span class="va">surveys</span><span class="op">)</span><span class="op">{</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">surveys</span>, mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">weight</span>, y <span class="op">=</span> <span class="va">species_id</span>, col <span class="op">=</span> <span class="va">sex</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html" class="external-link">geom_point</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="op">}</span></span>
+<span><span class="co">#pointplot('weight', 'species_id', surveys)</span></span></code></pre></div>
 <p>Function 5: a function for fun- pink function The pink function
 simply turns the colors in the previous graph pink so that I enjoy
-looking at it more. example: pinkfunction &lt;- function(x = weight, y =
-species_id,surveys){ ggplot(data = surveys, mapping = aes(x = weight, y
-= species_id, col = sex)) + geom_point() + stat_smooth(method = lm, col
-= “hotpink”) + theme(text = element_text(color = “pink”)) }
-#pinkfunction(‘weight’, ‘species_id’, surveys)</p>
+looking at it more. example:</p>
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">pinkfunction</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span> <span class="op">=</span> <span class="va">weight</span>, <span class="va">y</span> <span class="op">=</span> <span class="va">species_id</span>,<span class="va">surveys</span><span class="op">)</span><span class="op">{</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">surveys</span>, mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">weight</span>, y <span class="op">=</span> <span class="va">species_id</span>, col <span class="op">=</span> <span class="va">sex</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html" class="external-link">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html" class="external-link">stat_smooth</a></span><span class="op">(</span>method <span class="op">=</span> <span class="va">lm</span>, col <span class="op">=</span> <span class="st">"hotpink"</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html" class="external-link">theme</a></span><span class="op">(</span>text <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_text</a></span><span class="op">(</span>color <span class="op">=</span>  <span class="st">"pink"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="op">}</span></span>
+<span><span class="co">#pinkfunction('weight', 'species_id', surveys)</span></span></code></pre></div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
