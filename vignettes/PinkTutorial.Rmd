@@ -9,10 +9,24 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+Install Instructions:
+enter the following code into your console of rstudio. 
+devtools::install_github("juleshanhart/1hanhart.pkg")
+```{r}
+devtools::install_github("juleshanhart/1hanhart.pkg")
+```
+
+Data being used: surveys dataset
+Download Data Instructions: 
+enter the following code into your console of rstudio.
+read_csv("/cloud/project/hanhart.pkg/data/surveys.csv")
+```{r}
+read_csv("/cloud/project/hanhart.pkg/data/surveys.csv")
+```
+
 
 This package will consolidate and condense data, making it easier to look at, and then turn the final plot pink so I like it more.
 
-Data being used: /cloud/project/hanhart.pkg/data/surveys.csv
 
 Function 1: a function to clean data- consolidate function
 The consolidate function removes NA values and simultaneously deletes the majority of columns in order to return four "focus" columns. 
