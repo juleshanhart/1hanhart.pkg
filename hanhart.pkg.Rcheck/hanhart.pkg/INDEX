@@ -1,0 +1,12 @@
+consolidate             The consolidate function removes the NA values
+                        from the dataset, and consolidates the data
+                        into four "focus" columns.
+linearmodel             The linear model function will fit a linear
+                        model using plot_id and weight.
+pinkfunction            The pink function, used as the "just for fun"
+                        function, changes the color of the text and
+                        plot pink.
+pointplot               The point plot function will create a plot
+                        using geom_point
+weight_in_lbs           The mutate function will convert the values in
+                        the weight column from grams to pounds.

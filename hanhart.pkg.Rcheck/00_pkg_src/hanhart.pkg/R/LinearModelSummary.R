@@ -16,4 +16,4 @@ linearmodel <- function(data){
     lm(formula = plot_id~weight, data = surveys) %>% 
     return(clean)
 }
-summary(linearmodel(unlist(data)))
+#summary(linearmodel(unlist(data)))

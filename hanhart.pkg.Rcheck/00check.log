@@ -19,8 +19,129 @@
 * checking for portable file names ... OK
 * checking for sufficient/correct file permissions ... OK
 * checking serialization versions ... OK
-* checking whether package ‘hanhart.pkg’ can be installed ... ERROR
-Installation failed.
-See ‘/cloud/project/hanhart.pkg/hanhart.pkg.Rcheck/00install.out’ for details.
+* checking whether package ‘hanhart.pkg’ can be installed ... OK
+* checking installed package size ... OK
+* checking package directory ... OK
+* checking for future file timestamps ... OK
+* checking DESCRIPTION meta-information ... NOTE
+Malformed Title field: should not end in a period.
+* checking top-level files ... NOTE
+Non-standard files/directories found at top level:
+  ‘Agent’ ‘README.html’ ‘docs’ ‘rstudio-export’
+* checking for left-over files ... OK
+* checking index information ... OK
+* checking package subdirectories ... OK
+* checking R files for non-ASCII characters ... OK
+* checking R files for syntax errors ... OK
+* checking whether the package can be loaded ... OK
+* checking whether the package can be loaded with stated dependencies ... OK
+* checking whether the package can be unloaded cleanly ... OK
+* checking whether the namespace can be loaded with stated dependencies ... OK
+* checking whether the namespace can be unloaded cleanly ... OK
+* checking loading without being on the library search path ... OK
+* checking dependencies in R code ... NOTE
+Namespaces in Imports field not imported from:
+  ‘broom’ ‘tidyverse’
+  All declared Imports should be used.
+* checking S3 generic/method consistency ... OK
+* checking replacement functions ... OK
+* checking foreign function calls ... OK
+* checking R code for possible problems ... NOTE
+consolidate: no visible global function definition for ‘%>%’
+consolidate: no visible global function definition for ‘na.omit’
+consolidate: no visible global function definition for ‘select’
+consolidate: no visible binding for global variable ‘weight’
+consolidate: no visible binding for global variable ‘hindfoot_length’
+consolidate: no visible binding for global variable ‘sex’
+consolidate: no visible binding for global variable ‘species_id’
+linearmodel: no visible global function definition for ‘%>%’
+linearmodel: no visible global function definition for ‘lm’
+linearmodel: no visible binding for global variable ‘surveys’
+pinkfunction: no visible binding for global variable ‘weight’
+pinkfunction: no visible binding for global variable ‘species_id’
+pinkfunction: no visible global function definition for ‘ggplot’
+pinkfunction: no visible global function definition for ‘aes’
+pinkfunction: no visible binding for global variable ‘sex’
+pinkfunction: no visible global function definition for ‘geom_point’
+pinkfunction: no visible global function definition for ‘stat_smooth’
+pinkfunction: no visible binding for global variable ‘lm’
+pinkfunction: no visible global function definition for ‘theme’
+pinkfunction: no visible global function definition for ‘element_text’
+pointplot: no visible binding for global variable ‘weight’
+pointplot: no visible binding for global variable ‘species_id’
+pointplot: no visible global function definition for ‘ggplot’
+pointplot: no visible global function definition for ‘aes’
+pointplot: no visible binding for global variable ‘sex’
+pointplot: no visible global function definition for ‘geom_point’
+weight_in_lbs: no visible binding for global variable ‘surveys’
+weight_in_lbs: no visible global function definition for ‘%>%’
+weight_in_lbs: no visible global function definition for ‘mutate’
+weight_in_lbs: no visible binding for global variable ‘weight’
+Undefined global functions or variables:
+  %>% aes element_text geom_point ggplot hindfoot_length lm mutate
+  na.omit select sex species_id stat_smooth surveys theme weight
+Consider adding
+  importFrom("stats", "lm", "na.omit")
+to your NAMESPACE file.
+* checking Rd files ... OK
+* checking Rd metadata ... OK
+* checking Rd line widths ... OK
+* checking Rd cross-references ... OK
+* checking for missing documentation entries ... WARNING
+Undocumented data sets:
+  ‘focuscol’ ‘pounds’ ‘surveys’
+All user-level objects in a package should have documentation entries.
+See chapter ‘Writing R documentation files’ in the ‘Writing R
+Extensions’ manual.
+* checking for code/documentation mismatches ... OK
+* checking Rd \usage sections ... WARNING
+Undocumented arguments in documentation object 'pinkfunction'
+  ‘x’ ‘y’ ‘surveys’
+Documented arguments not in \usage in documentation object 'pinkfunction':
+  ‘data’
+
+Undocumented arguments in documentation object 'pointplot'
+  ‘x’ ‘y’ ‘surveys’
+Documented arguments not in \usage in documentation object 'pointplot':
+  ‘data’
+
+Functions with \usage entries need to have the appropriate \alias
+entries, and all their arguments documented.
+The \usage entries must correspond to syntactically valid R code.
+See chapter ‘Writing R documentation files’ in the ‘Writing R
+Extensions’ manual.
+* checking Rd contents ... OK
+* checking for unstated dependencies in examples ... OK
+* checking contents of ‘data’ directory ... WARNING
+Files not of a type allowed in a ‘data’ directory:
+  ‘pinkplot.pdf’ ‘pointplot.pdf’
+Please use e.g. ‘inst/extdata’ for non-R data files
+
+File ‘data/datalist’ contains malformed line(s):
+  ‘lm: ’
+Output for data("lm", package = "hanhart.pkg"):
+  Error in read.table(...) : more columns than column names
+  Calls: <Anonymous> ... <Anonymous> -> assign -> my_read_table -> read.table
+  Execution halted
+* checking data for non-ASCII characters ... NOTE
+  Error loading dataset 'lm': more columns than column names
+  Call sequence:
+  5: stop("more columns than column names")
+  4: read.table(...)
+  3: my_read_table(zfile, header = TRUE, as.is = FALSE)
+  2: assign(name, my_read_table(zfile, header = TRUE, as.is = FALSE), 
+         envir = tmp_env)
+    ...
+  
+* checking data for ASCII and uncompressed saves ... OK
+* checking files in ‘vignettes’ ... WARNING
+Files in the 'vignettes' directory but no files in 'inst/doc':
+  ‘PinkTutorial.Rmd’
+Files named as vignettes but with no recognized vignette engine:
+   ‘vignettes/PinkTutorial.Rmd’
+(Is a VignetteBuilder field missing?)
+* checking examples ... NONE
+* checking for non-standard things in the check directory ... OK
+* checking for detritus in the temp directory ... OK
 * DONE
-Status: 1 ERROR
+Status: 4 WARNINGs, 5 NOTEs

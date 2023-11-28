@@ -1,0 +1,10 @@
+
+```{r}
+consolidate <- function(data){
+    clean <- data %>% 
+        na.omit(data) %>% 
+        select(weight, hindfoot_length, sex, species_id) %>% 
+        return(clean)
+}
+head(consolidate(surveys))
+```

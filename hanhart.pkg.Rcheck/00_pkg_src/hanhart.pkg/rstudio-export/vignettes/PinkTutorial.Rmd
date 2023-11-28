@@ -1,0 +1,13 @@
+---
+title: "PinkTutorial"
+author: "Jules Hanhart"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+type stuff in here about R package- this will be your "tutorial" file. put data you will be using, what it does, and brief how to. 

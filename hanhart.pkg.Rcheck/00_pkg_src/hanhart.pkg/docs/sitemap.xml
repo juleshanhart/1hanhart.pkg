@@ -19,10 +19,22 @@
     <loc>/index.html</loc>
   </url>
   <url>
+    <loc>/reference/consolidate.html</loc>
+  </url>
+  <url>
     <loc>/reference/get_weight.html</loc>
   </url>
   <url>
     <loc>/reference/index.html</loc>
+  </url>
+  <url>
+    <loc>/reference/linearmodel.html</loc>
+  </url>
+  <url>
+    <loc>/reference/pinkfunction.html</loc>
+  </url>
+  <url>
+    <loc>/reference/pointplot.html</loc>
   </url>
   <url>
     <loc>/reference/weight_in_lbs.html</loc>

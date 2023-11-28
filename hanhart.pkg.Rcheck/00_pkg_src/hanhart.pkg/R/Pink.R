@@ -14,4 +14,4 @@
 pinkfunction <- function(x = weight, y = species_id,surveys){
   ggplot(data = surveys, mapping = aes(x = weight, y = species_id, col = sex)) + geom_point() + stat_smooth(method = lm, col = "hotpink") + theme(text = element_text(color =  "pink"))
 }
-pinkfunction('weight', 'species_id', surveys)
+#pinkfunction('weight', 'species_id', surveys)
