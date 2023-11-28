@@ -11,5 +11,7 @@
 
 
 
-pointplot <- ggplot(data = surveys, mapping = aes(x = weight, y = species_id, col = sex)) + geom_point()
-pointplot
+pointplot <- function(x = weight, y = species_id, surveys){
+  ggplot(data = surveys, mapping = aes(x = weight, y = species_id, col = sex)) + geom_point()
+}
+pointplot('weight', 'species_id', surveys)
