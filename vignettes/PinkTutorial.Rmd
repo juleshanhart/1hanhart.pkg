@@ -20,6 +20,7 @@ library(tidyverse)
 library(dplyr)
 library(broom)
 library(knitr)
+library(ggplot2)
 ```
 
 Data being used: surveys dataset
@@ -42,7 +43,16 @@ consolidate <- function(data){
         select(weight, hindfoot_length, sex, species_id) %>% 
         return(clean)
 }
-#head(consolidate(surveys))
+```
+Function 1 output:
+```{r}
+consolidate <- function(data){
+    clean <- data %>% 
+        na.omit(data) %>% 
+        select(weight, hindfoot_length, sex, species_id) %>% 
+        return(clean)
+    head(consolidate(surveys))
+}
 ```
 
 Function 2: a function to manipulate data- mutate function
