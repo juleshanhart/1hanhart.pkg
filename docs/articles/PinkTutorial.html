@@ -90,19 +90,34 @@ read_csv(“/cloud/project/hanhart.pkg/data/surveys.csv”)</p>
 look at, and then turn the final plot pink so I like it more.</p>
 <p>Function 1: a function to clean data- consolidate function The
 consolidate function removes NA values and simultaneously deletes the
-majority of columns in order to return four “focus” columns.</p>
+majority of columns in order to return four “focus” columns. example:
+consolidate &lt;- function(data){ clean &lt;- data %&gt;% na.omit(data)
+%&gt;% select(weight, hindfoot_length, sex, species_id) %&gt;%
+return(clean) } #head(consolidate(surveys))</p>
 <p>Function 2: a function to manipulate data- mutate function The mutate
-function converts the data in the weight column from grams to
-pounds.</p>
+function converts the data in the weight column from grams to pounds.
+example: weight_in_lbs &lt;- function(data = surveys){ clean &lt;- data
+%&gt;% mutate(weight_in_lbs = weight*0.0022) %&gt;% return(clean) }
+#head(weight_in_lbs(surveys))</p>
 <p>Function 3: a statistical function- lm function The lm function fits
 a linear model using plot_id and weight, giving information about
-residuals, error rates, estimates, etc.</p>
+residuals, error rates, estimates, etc. example: linearmodel &lt;-
+function(data){ clean &lt;- data %&gt;% lm(formula = plot_id~weight,
+data = surveys) %&gt;% return(clean) }
+#summary(linearmodel(unlist(data)))</p>
 <p>Function 4: a function that plots data - point plot function The
 point plot function returns a plot using geom_point(), of weight and
-species_id grouped by sex.</p>
+species_id grouped by sex. example: pointplot &lt;- function(x = weight,
+y = species_id, surveys){ ggplot(data = surveys, mapping = aes(x =
+weight, y = species_id, col = sex)) + geom_point() }
+#pointplot(‘weight’, ‘species_id’, surveys)</p>
 <p>Function 5: a function for fun- pink function The pink function
 simply turns the colors in the previous graph pink so that I enjoy
-looking at it more.</p>
+looking at it more. example: pinkfunction &lt;- function(x = weight, y =
+species_id,surveys){ ggplot(data = surveys, mapping = aes(x = weight, y
+= species_id, col = sex)) + geom_point() + stat_smooth(method = lm, col
+= “hotpink”) + theme(text = element_text(color = “pink”)) }
+#pinkfunction(‘weight’, ‘species_id’, surveys)</p>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
